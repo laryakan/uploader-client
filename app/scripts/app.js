@@ -11,7 +11,8 @@
 angular
   .module('uploaderClientApp', [
     'ngAnimate',
-    'ngRoute'
+    'ngRoute',
+    'angularFileUpload'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,6 +25,11 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/upload', {
+        templateUrl: 'views/upload.html',
+        controller: 'UploadCtrl',
+        controllerAs: 'upload'
       })
       .otherwise({
         redirectTo: '/'
